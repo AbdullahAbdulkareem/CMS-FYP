@@ -35,7 +35,7 @@ const BuildingForm = () => {
   
     console.log('Payload:', data);
   
-      fetch('http://localhost:5000/create_build', {
+      fetch('https://cms-fyp-front-end.vercel.app/create_build', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
