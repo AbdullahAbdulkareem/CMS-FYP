@@ -13,7 +13,7 @@ app.use(cors({
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-app.get("/",(req,res)=>{
+app.get("/",(req , res)=>{
     res.json("Hello");
 })
 // Define the POST route
