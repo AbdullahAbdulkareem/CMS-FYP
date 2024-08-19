@@ -13,6 +13,9 @@ app.use(cors({
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
 // Define the POST route
 app.post('/create_build', (req, res) => {
   const { totalFloors, roomsPerFloor } = req.body;
