@@ -5,7 +5,7 @@ import './create_build.css';
 const BuildingForm = () => {
   const [numFloors, setnumFloors] = useState('');
   const [roomsPerFloor, setRoomsPerFloor] = useState([]);
-
+  axios.defaults.withCredentials = true;
   const handleFloorChange = (event) => {
     const value = event.target.value;
     setnumFloors(value);
@@ -36,7 +36,7 @@ const BuildingForm = () => {
   
     console.log('Payload:', data);
   
-    axios.post('https://cms-fyp-ten.vercel.app', data)
+    axios.post('https://cms-fyp-ten.vercel.app/create_build', data)
       .then(response => {
         console.log('Success:', response.data);
       })
