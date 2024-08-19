@@ -5,7 +5,7 @@ const port = 5000;
 
 // Enable CORS for all routes and origins
 app.use(cors({
-  origin: 'https://cms-fyp-front-end.vercel.app', // Allow requests from this origin
+  origin: 'https://cms-fyp-front-end.vercel.app/create_build', // Allow requests from this origin
   methods: ['GET', 'POST'], // Specify allowed methods
   credentials: true, // Enable setting cookies
   allowedHeaders: ['Content-Type'], // Specify allowed headers

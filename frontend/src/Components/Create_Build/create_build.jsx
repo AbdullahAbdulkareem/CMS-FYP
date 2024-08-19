@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './create_build.css';
 
 const BuildingForm = () => {
@@ -35,16 +36,13 @@ const BuildingForm = () => {
   
     console.log('Payload:', data);
   
-      fetch('https://cms-fyp-front-end.vercel.app/create_build', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then(response => response.json())
-      .then(data => console.log('Success:', data))
-      .catch((error) => console.error('Error:', error));
+    axios.post('https://cms-fyp-front-end.vercel.app/create_build', data)
+      .then(response => {
+        console.log('Success:', response.data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   };
   
 
