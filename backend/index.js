@@ -24,10 +24,12 @@ app.post('/create_build', (req, res) => {
   console.log('Total Floors:', totalFloors);
   console.log('Rooms Per Floor:', roomsPerFloor);
 
-  // Handle the data (e.g., store in a database)
+  const message = `Building data received successfully! Total Floors: ${totalFloors}, Rooms Per Floor: ${JSON.stringify(roomsPerFloor)}`;
 
-  res.status(200).send({ message: 'Building data received successfully!' });
+  // Send the response
+  res.status(200).send({ message });
 });
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
