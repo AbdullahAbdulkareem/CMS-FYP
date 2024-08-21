@@ -21,6 +21,9 @@ app.get("/",(req , res)=>{
 app.post('/create_build', (req, res) => {
   const { totalFloors, roomsPerFloor } = req.body;
 
+  if (!totalFloors || !roomsPerFloor) {
+    return res.status(400).json({ error: 'Missing totalFloors or roomsPerFloor' });
+  }
   const response = {totalFloors, roomsPerFloor};
 
    res.json(response);
