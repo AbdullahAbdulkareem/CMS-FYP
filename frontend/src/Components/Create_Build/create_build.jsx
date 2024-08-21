@@ -32,7 +32,7 @@ const BuildingForm = () => {
   
     console.log('Payload:', data);
   
-    axios.post('https://cms-fyp-ten.vercel.app/create_build', data.json())
+    axios.post('https://cms-fyp-ten.vercel.app/create_build', data)
       .then(response => {
         console.log('Success:');
       })
