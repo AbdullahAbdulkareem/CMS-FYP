@@ -19,9 +19,9 @@ app.get("/",(req , res)=>{
 })
 // Define the POST route
 app.post('/create_build', (req, res) => {
-  console.log('Received data:', req.body); // Log the received data
+  console.log('Received data:', req.data); // Log the received data
 
-  const { totalFloors, roomsPerFloor } = req.body;
+  const { totalFloors, roomsPerFloor } = req.data;
 
   if (!totalFloors || !roomsPerFloor) {
     return res.status(400).json({ error: 'Missing totalFloors or roomsPerFloor' });
