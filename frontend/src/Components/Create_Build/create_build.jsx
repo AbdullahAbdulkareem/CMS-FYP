@@ -10,29 +10,25 @@ const BuildingForm = () => {
     const value = event.target.value;
     setnumFloors(value);
 
-    const newRoomsPerFloor = Array.from({ length: value }, (_, i) => ({
-      floor: i,
-      rooms: '',
-    }));
+    const newRoomsPerFloor = Array.from({ length: value }, () => '');
     setRoomsPerFloor(newRoomsPerFloor);
-  };
+  }
 
   const handleRoomChange = (floorIndex, event) => {
-    const value = event.target.value;
-    setRoomsPerFloor((prevRooms) =>
-      prevRooms.map((item, index) =>
-        index === floorIndex ? { ...item, rooms: value } : item
-      )
-    );
-  };
+  const value = Number(event.target.value); // Convert input value to a number
+  setRoomsPerFloor((prevRooms) =>
+    prevRooms.map((rooms, index) => (index === floorIndex ? value : rooms))
+  );
+};
 
   const handleSubmit = (event) => {
     event.preventDefault();
   
     const data = {
       totalFloors: Number(numFloors),
-      roomsPerFloor: roomsPerFloor.map((floorData) => [floorData.floor, Number(floorData.rooms)]),
+      roomsPerFloor: roomsPerFloor.map(Number), 
     };
+    
   
     console.log('Payload:', data);
   
