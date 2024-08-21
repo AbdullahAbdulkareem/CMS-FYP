@@ -20,8 +20,10 @@ app.get("/",(req , res)=>{
 // Define the POST route
 app.post('/create_build', (req, res) => {
   const { totalFloors, roomsPerFloor } = req.body;
-  
-   res.json({ totalFloors, roomsPerFloor });
+
+  const response = {totalFloors, roomsPerFloor};
+
+   res.json(response);
 });
 
 
