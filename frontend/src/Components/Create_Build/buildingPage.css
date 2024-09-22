@@ -1,0 +1,17 @@
+.create-button {
+    display: inline-block;
+    width: 130px;
+    margin-left: 1150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #9292a8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .create-button:hover {
+    background-color: #626169;
+  }
