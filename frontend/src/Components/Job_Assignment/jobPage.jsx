@@ -7,7 +7,7 @@ const JobPage = () => {
   const [functions, setFunctions] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get('http://localhost:5000/jobPage')
+    axios.get('https://cms-fyp-ten.vercel.app//jobPage')
       .then(response => {
         console.log('Fetched data:', response.data);
         setFunctions(response.data); 

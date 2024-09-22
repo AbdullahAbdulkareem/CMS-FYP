@@ -7,7 +7,7 @@ const ProcessPage = () => {
   const [building, setBuilding] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get('http://localhost:5000/buildingPage')
+    axios.get('https://cms-fyp-ten.vercel.app//buildingPage')
       .then(response => {
         console.log('Fetched data:', response.data);
         setBuilding(response.data); 

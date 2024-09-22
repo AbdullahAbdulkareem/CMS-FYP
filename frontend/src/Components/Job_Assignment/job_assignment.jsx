@@ -23,7 +23,7 @@ const Job_assignment = () => {
   
     console.log('Payload:', data);
   
-    axios.post('http://localhost:5000/job_assignment', data)
+    axios.post('https://cms-fyp-ten.vercel.app//job_assignment', data)
       .then(response => {
         console.log('Success:');
       })

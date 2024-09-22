@@ -13,7 +13,7 @@ const db = mysql.createPool({
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://cms-fyp-front-end.vercel.app/', 
   methods: ['GET', 'POST'], 
   credentials: true,  
   allowedHeaders: ['Content-Type'], 

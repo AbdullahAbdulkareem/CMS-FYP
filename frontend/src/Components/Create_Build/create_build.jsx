@@ -72,7 +72,7 @@ const BuildingForm = () => {
       noFunctions: Number(noFunctions),
     };
     
-    axios.post('http://localhost:5000/create_build', data)
+    axios.post('https://cms-fyp-ten.vercel.app//create_build', data)
       .then(response => {
         console.log('Success:');
       })

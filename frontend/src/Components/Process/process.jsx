@@ -14,7 +14,7 @@ const Process = () => {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get('http://localhost:5000/process')
+    axios.get('https://cms-fyp-ten.vercel.app//process')
       .then(response => {
         console.log('Fetched data:', response.data);
   
@@ -66,7 +66,7 @@ const Process = () => {
       
       console.log(`Payload for task ${index + 1}:`, taskData);
     
-      axios.post('http://localhost:5000/task', taskData)
+      axios.post('https://cms-fyp-ten.vercel.app//task', taskData)
         .then(response => {
           console.log(`Success for task ${index + 1}:`, response);
         })

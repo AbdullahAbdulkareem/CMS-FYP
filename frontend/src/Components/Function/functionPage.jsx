@@ -7,7 +7,7 @@ const FunctionList = () => {
   const [buildings, setBuildings] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get('http://localhost:5000/functionPage')
+    axios.get('https://cms-fyp-ten.vercel.app//functionPage')
       .then(response => {
         console.log('Fetched data:', response.data);
         setBuildings(response.data); 

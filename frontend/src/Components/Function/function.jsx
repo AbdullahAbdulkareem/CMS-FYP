@@ -25,7 +25,7 @@ const Functions = () => {
   
     console.log('Payload:', data);
   
-    axios.post('http://localhost:5000/function', data)
+    axios.post('https://cms-fyp-ten.vercel.app//function', data)
       .then(response => {
         console.log('Success:');
       })
