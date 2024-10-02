@@ -6,7 +6,7 @@ const port = 5000;
 
 const db = mysql.createPool({
   connectionLimit : 10,
-  host: "https://2541-39-40-60-201.ngrok-free.app", 
+  host: "2541-39-40-60-201.ngrok-free.app", 
   user: "root",
   password: '',
   database: "fyp-project", 
